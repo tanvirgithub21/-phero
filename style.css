@@ -1,0 +1,272 @@
+/*---------------
+    fonts
+  --------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap");
+
+/*----------------
+     common style
+--------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #121212;
+}
+
+/*------------------
+   banner section 
+--------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.banner {
+  display: flex;
+  height: 100vh;
+}
+.banner-left {
+  flex: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-title {
+  font-size: 60px;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+}
+.banner-title::before {
+  content: "Programing Hero";
+  position: absolute;
+  color: #22bedd;
+  animation: typing 3s linear infinite;
+}
+.banner-text {
+  line-height: 2;
+  margin: 20px 0;
+}
+.love-btn {
+  /* outline: 0; */
+  font-size: 18px;
+  padding: 10px 30px;
+  background-color: #22bedd;
+  color: white;
+  border: 4px solid #22bedd;
+  transition: 0.3s ease;
+}
+.love-btn:hover {
+  background-color: transparent;
+  color: #22bedd;
+}
+/*--------------- 
+    gallery
+---------------- */
+.section-title {
+  display: flex;
+  justify-content: center;
+  color: #22bedd;
+  font-size: 40px;
+  padding: 30px 0;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.photo {
+  height: 280px;
+  width: 280px;
+  position: relative;
+  overflow: hidden;
+}
+.photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.border {
+  background-color: white;
+  position: absolute;
+  transition: 0.7s ease-in-out;
+}
+.border.top,
+.border.bottom {
+  height: 4px;
+  width: 270px;
+}
+.border.right,
+.border.left {
+  height: 270px;
+  width: 4px;
+}
+.border.top {
+  top: 5px;
+  right: 100%;
+}
+.border.bottom {
+  bottom: 5px;
+  left: 100%;
+}
+.border.right {
+  right: 5px;
+  bottom: 100%;
+}
+.border.left {
+  left: 5px;
+  top: 100%;
+}
+.photo:hover .border.top {
+  right: 5px;
+}
+.photo:hover .border.bottom {
+  left: 5px;
+}
+.photo:hover .border.right {
+  bottom: 5px;
+}
+.photo:hover .border.left {
+  top: 5px;
+}
+.photo-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #22bedd;
+  padding-left: 30px;
+  top: 0;
+  left: 0;
+  transform: translateY(400px);
+  transition: 0.4s ease-in-out;
+}
+.photo:hover .photo-content {
+  transform: translateY(200px);
+}
+.photo::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.5);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+.photo:hover::before {
+  opacity: 1;
+}
+
+@keyframes typing {
+  0% {
+    content: "P|";
+  }
+  4% {
+    content: "Pr|";
+  }
+  8% {
+    content: "Pro|";
+  }
+  12% {
+    content: "Prog|";
+  }
+  16% {
+    content: "Progr|";
+  }
+  20% {
+    content: "Progra|";
+  }
+  24% {
+    content: "Program|";
+  }
+  28% {
+    content: "Programm|";
+  }
+  32% {
+    content: "Programmi|";
+  }
+  36% {
+    content: "Programmin|";
+  }
+  40% {
+    content: "Programmin |";
+  }
+  44% {
+    content: "Programming |";
+  }
+  48% {
+    content: "Programming H|";
+  }
+  52% {
+    content: "Programming He|";
+  }
+  56% {
+    content: "Programming Her|";
+  }
+  60% {
+    content: "Programming Hero|";
+  }
+  64%,
+  83% {
+    content: "Programming Hero|";
+  }
+  84% {
+    content: "Programming Her|";
+  }
+  85% {
+    content: "Programming He|";
+  }
+  86% {
+    content: "Programming H|";
+  }
+  87% {
+    content: "Programming |";
+  }
+  88% {
+    content: "Programming|";
+  }
+  89% {
+    content: "Programmin|";
+  }
+  90% {
+    content: "Programmi|";
+  }
+  91% {
+    content: "Programm|";
+  }
+  92% {
+    content: "Program|";
+  }
+  93% {
+    content: "Progra|";
+  }
+  94% {
+    content: "Progr|";
+  }
+  95% {
+    content: "Prog|";
+  }
+  96% {
+    content: "Pro|";
+  }
+  97% {
+    content: "Pr|";
+  }
+  98% {
+    content: "P|";
+  }
+  99% {
+    content: "|";
+  }
+  100% {
+    content: "|";
+  }
+}
